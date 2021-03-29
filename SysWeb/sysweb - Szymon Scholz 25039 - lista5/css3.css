@@ -1,0 +1,63 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 2em 3em;
+    background-color: khaki;
+    display: grid;
+    grid-template: "lewy prawy" / 1fr 3fr;
+    gap: 3em;
+}
+
+.lewy {
+    grid-area: lewy;
+    background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    gap: 1em;
+}
+
+.smieszny {
+    border: 2px solid teal;
+    padding: 1em;
+}
+
+.smieszny:hover {
+    border: 10px dotted red;
+}
+
+.logowanie {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#tekst {
+    min-width: 25px;
+    width: 50px;
+    height: 50%;
+    align-self: center;
+}
+
+#fancy {
+    font-size: 2em;
+}
+
+.prawy {
+    grid-area: prawy;
+    background-color: yellowgreen;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 2em;
+    overflow-y: auto;
+}
+
+hr {
+    width: 100%;
+    border-style: groove;
+}
+

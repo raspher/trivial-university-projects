@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <td>imię*</td>
+                <td><input type="text" name="imie" id="pole_imie" required pattern="\p{Lu}(\p{Ll})+"/></td>
+            </tr>
+            <tr>
+                <td>nazwisko*</td>
+                <td><input type="text" name="nazwisko" id="pole_nazwisko" required pattern="^\p{Lu}(\p{L})+(([-]\p{Lu}(\p{L})+)?)*$"/></td>
+            </tr>
+            <tr>
+                <td>email*</td>
+                <td><input type="text" name="email" id="pole_email" required pattern="^\w+(([._])?\w)+@\w+([\.-]?\w+)+(\.\w+)+$"/></td>
+            </tr>
+            <tr>
+                <td>hasło*</td>
+                <td><input type="text" name="haslo" id="pole_haslo" required pattern="^(?=.*(\p{L})+)(?=.*\d)[(\p{L})+\d]+$"/></td>
+            </tr>
+            <tr>
+                <td>płeć</td>
+                <td><input type="text" name="plec" id="pole_plec" pattern="^(kobieta|mężczyzna)$"/></td>
+            </tr>
+            <tr>
+                <td>ulica</td>
+                <td><input type="text" name="ulica" id="pole_ulica" pattern="^\p{Lu}(\p{L})+(([ -]\p{Lu}(\p{L})+)?)*$"/></td>
+            </tr>
+            <tr>
+                <td>kod pocztowy</td>
+                <td><input type="text" name="kod" id="pole_kod" pattern="\d\d-\d\d\d"/></td>
+            </tr>
+            <tr>
+                <td>miasto</td>
+                <td><input type="text" name="miasto" id="pole_miasto" pattern="^\p{Lu}(\p{L})+(([ -]\p{Lu}(\p{L})+)?)*$"/></td>
+            </tr>
+            <tr>
+                <td>wojewodztwo</td>
+                <td><input type="text" name="wojewodztwo" id="pole_wojewodztwo" pattern="(dolnośląskie|kujawsko-pomorskie|lubelskie|lubuskie|łódzkie|małopolskie|mazowieckie|opolskie|podkarpackie|podlaskie|pomorskie|śląskie|świętokrzyskie|warmińsko-mazurskie|wielkopolskie|zachodniopomorskie)"/></td>
+            </tr>
+            <tr>
+                <td>Wyrażam zgodę na przetwarzanie moich danych osobowych</td>
+                <td><input type="text" name="zgoda" id="pole_zgoda" pattern="(tak|nie)"/></td>
+            </tr>
+        </table>
+        <input type="submit" value="Oki"/> <button type="reset">Reset</button>
+    </form>
+    
+</body>
+</html>

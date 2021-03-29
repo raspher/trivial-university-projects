@@ -1,0 +1,74 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>lista 4</title>
+<style>  
+    .box {
+        display: flex;
+        width: 100%;
+        height: 100%;      
+        flex-wrap: wrap;
+        justify-items: center;
+    }
+    
+    p {
+        position: relative;
+        top: 50%;
+        margin: 0;
+        text-align: center;
+        justify-self: center;
+    }
+
+    .pierwszy {
+        border-collapse: collapse;
+        width: 100%;
+        height: 30%;
+        border-color: green;
+        border-style: solid;
+        margin: 0;
+    }
+
+    .drugi {
+        border-color: green;
+        border-style: solid;
+        margin: 0;
+        height: 70%;
+        flex-grow: 1;
+    }
+
+    .trzeci {
+        border-color: green;
+        border-style: solid;
+        margin: 0;
+        height: 70%;
+        flex-grow: 1;
+    }
+
+    @media screen and (max-width: 800px) {
+        .box {
+            flex-direction: column;
+        }
+
+        .pierwszy {
+            height: 15%;
+            flex-grow: 1;
+        }
+        .drugi {
+            height: 15%;
+            flex-grow: 1;
+        }
+        .trzeci {
+            height: 15%;
+            flex-grow: 1;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="box">
+        <div class="pierwszy main"><p>Element 1</p></div>
+        <div class="drugi main"><p>Element 2</p></div>
+        <div class="trzeci main"><p>Element 3</p></div>
+    </div>
+</body>
+</html>

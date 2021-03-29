@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Lista2</title>
+    <meta name="Author" content="Szymon Scholz">
+    <meta charset="UTF-8">
+    <style>
+        .zad1 {
+            border: 1px solid black;
+            border-spacing: 0px;
+        }
+
+        .zad1kol1 {
+            width: 5em;
+        }
+
+        select {
+            max-height: 5ex;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista 2</h1>
+    <h2>1</h2>
+    <hr/>
+
+    <table class="zad1">
+        <tr class="zad1">
+            <th class="zad1 zad1kol1"></th>
+            <th class="zad1">Poniedziałek</th>
+            <th class="zad1">Wtorek</th>
+            <th class="zad1">Środa</th>
+            <th class="zad1">Czwartek</th>
+            <th class="zad1">piątek</th>
+        </tr>
+        <tr class="zad1">
+            <th class="zad1 zad1kol1">8:00</th>
+            <td class="zad1">PSW</td>
+            <td class="zad1">PUM</td>
+            <td class="zad1" colspan="3">JEE</td>
+        </tr>
+        <tr class="zad1">
+            <th class="zad1 zad1kol1">9:40</th>
+            <td class="zad1" colspan="4">Laboratoria PSW</td>
+            <td class="zad1">ASD</td>
+        </tr>
+        <tr class="zad1">
+            <th class="zad1 zad1kol1">11:20</th>
+            <td class="zad1" colspan="2">Laboratoria JEE</td>
+            <td class="zad1" colspan="2">Laboratoria ASD</td>
+            <td class="zad1">JEE</td>
+        </tr>
+    </table>
+
+    <br/>
+    <h2>2</h2>
+    <hr>
+
+    <form action="" method="post">
+        <table class="zad2">
+            <tr>
+                <td><label>komputerowych:</label></td>
+                <td><input type="text" value="NET"/></td>
+            </tr>
+            <tr>
+                <td><label>przy:</label></td>
+                <td>
+                    <select multiple="multiple">
+                        <option>organizowanych</option>
+                        <option>xx</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>informatycznej:</label></td>
+                <td><input type="text" value="Rozwinięcie"/></td>
+            </tr>
+            <tr>
+                <td><label>technologii:</label></td>
+                <td>
+                    <label>systemowego</label><input type="checkbox" checked/>
+                    <label>gospodarczych</label><input type="checkbox" checked/>
+                    <label>kształcenia</label><input type="checkbox"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label>stanowisku:</label></td>
+                <td>
+                    <button>również</button><!--
+                    --><button>również</button><!--
+                    --><button>również</button>
+                </td>
+            </tr>
+            <tr>
+                <td><label>komputerowych:</label></td>
+                <td>
+                    <select name="" id="">
+                        <option>jako</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>projektów:</label></td>
+                <td>
+                    <select name="" id="">
+                        <option>najnowszych</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>także:</label></td>
+                <td>
+                    <textarea>specjalności własnym powoduje</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><label>inżynieria:</label></td>
+                <td>
+                    <label>systemowego</label><input type="radio"/>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+        <h2>3</h2>
+        <hr>
+
+        <div style="display: flex; flex-flow: column;">
+            <div>
+                <p style="display: flex;">Lorem ipsum, dolor sit amet consectetur adipisicing elit.<img src="./logo.png"/></p> 
+            </div>
+            <div style="display: flex; align-content: center; ">
+                <p style="align-self: center;">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p> <img src="./logo.png"/>
+            </div>
+            <div style="display: flex; align-content: center;">
+                <p style="display: flex; align-self: flex-end;">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p> <img src="./logo.png"/>
+            </div>
+            <div style="display: flex; float: left;">
+                
+                <img src="./logo.png"/> <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p> 
+                
+                
+            </div>
+            <div style="display: flex; align-items: flex-end; height: 200px; ">
+                <img src="./logo.png" width="40px" height="40px" style="margin-left: 150px;"/>
+                <img src="./logo.png" width="60px" height="60px"/>
+                <img src="./logo.png" width="150px" height="90px"/>
+                <img src="./logo.png" width="60px" height="280px"/>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

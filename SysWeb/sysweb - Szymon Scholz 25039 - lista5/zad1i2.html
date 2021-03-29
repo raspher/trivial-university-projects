@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+        body {
+            margin: 0;
+            padding: 50px;
+            gap: 25px;
+            display: grid;
+            height: calc(100% - 100px);
+            width: calc(100% - 100px);
+            grid-template: 
+                "los1 guzik1 los2" 1fr
+                "fib1 guzik2 fib2" 1fr 
+                / 1fr auto 1fr;
+        }
+
+        div {
+            margin: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .los1 {
+            background-color: aqua;
+            grid-area: los1;
+        }
+
+        .los2 {
+            background-color: burlywood;
+            grid-area: los2;
+        }
+
+        .fib1 {
+            background-color: coral;
+            grid-area: fib1;
+        }
+
+        .fib2 {
+            background-color: darkgray;
+            grid-area: fib2;
+        }
+
+        .guzik1,.guzik2 {
+            display: flex;
+            padding: 50px;
+            color: 0000000;
+        }
+
+        p {
+            font-size: 3em;
+        }
+    </style>
+</head>
+<body>
+    <div class="los1">
+        <p id="liczbaLos1">0</p>
+    </div>
+
+    <div class="los2">
+        <p id="liczbaLos2">0</p>
+    </div>
+
+    <div class="fib1">
+        <p id="autofib">0</p>
+    </div>
+
+    <div class="fib2">
+        <p id="manualfib">0</p>
+    </div>
+
+    <div class="guzik1">
+        <input type="button" value="<< Losuj >>" onclick="losuj()">
+    </div>
+
+    <div class="guzik2">
+        <input type="button" value="    Losuj >> " onclick="manualFibonacci()">
+    </div>
+</body>
+<script>
+    function losuj(){
+        document.getElementById("liczbaLos1").innerHTML = Math.floor(Math.random() * 25040);
+        document.getElementById("liczbaLos2").innerHTML = Math.floor(Math.random() * 25040 * 2 - 25040);
+    };
+
+    var mfibhelp = 0;
+    var mfib = 1;
+    function manualFibonacci(){
+        document.getElementById("manualfib").innerHTML = mfibhelp;
+        var pom = mfibhelp;
+        mfibhelp = mfib;
+        mfib = mfib + pom; 
+    };
+
+    var fibhelp = 0;
+    var fib = 1;
+    function autofibonacci(){
+        document.getElementById("autofib").innerHTML = fibhelp;
+        var pom = fibhelp;
+        fibhelp = fib;
+        fib = fib + pom; 
+    }
+
+    window.onload = function() {
+        setInterval(autofibonacci, 2000);
+    };
+
+    
+</script>
+</html>

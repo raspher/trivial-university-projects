@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+
+        .zadA {
+            height: fit-content;
+            background-color: pink;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1.5fr;
+            grid-template-rows: 100px 100px;
+            gap: 8px;
+            padding: 8px;
+        }
+
+        .Aitem {
+            background-color: whitesmoke;
+        }
+
+        .zadB {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 10px;
+            height: 200px;
+            background-color: chartreuse;
+            padding: 8px;
+        }
+
+        .Bitem {
+            background-color: black;
+        }
+
+        .BHeader {
+            grid-area: 2 / 1 / span 1 / span 2;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="zadA">
+        <div class="Aitem"></div>
+        <div class="Aitem"></div>
+        <div class="Aitem"></div>
+        <div class="Aitem"></div>
+        <div class="Aitem"></div>
+        <div class="Aitem"></div>
+    </div>
+    <div class="zadB">
+        <div class="Bitem"></div>
+        <div class="Bitem"></div>
+        <div class="BHeader"></div>
+        <div class="Bitem"></div>
+        <div class="Bitem"></div>
+    </div>
+</body>
+</html>

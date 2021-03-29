@@ -1,0 +1,73 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+left to right direction
+
+note "Każdy element powinien być rozwinięty o CRUDa, \n tzn. informacja o odczycie, zpisie, edycji i dodawaniu" as aaa
+
+rectangle "Baza pacjentów" {
+  usecase "Dodanie pacjenta" as dodpac
+  usecase "Edycja danych pacjenta" as edpac
+  usecase "Dodanie wizyty" as dodwiz
+  usecase "Wyszukaj pacjenta" as wpac
+  usecase "tworzenie paragonu" as tpar
+
+  rectangle "Wizyta" {
+    usecase "Dodanie wyników badań" as dwb
+    usecase "Dodanie przeprowadzonego badania" as dpb
+    usecase "Wygenerowanie skierowania" as wsk
+    usecase "Wygenerowanie recepty" as wry
+    usecase "Dodanie diagnozy" as dgzy
+    usecase "Historia chorób" as hch
+    usecase "wgląd" as wgl
+    usecase "dodanie nowego wpisu" as dnw
+
+    usecase "Dodanie informacji o szczepieniu" as dios
+    usecase "Historia szczepień" as hiszcz
+
+
+  }
+  usecase "Dodawanie nowych kont w bazie" as dnkwb
+  usecase "Usuwanie kont w bazie" as ukwb
+  usecase "zarządzanie rolami" as zr
+  usecase "zarządzanie uprawnieniami" as zu
+  note "np. dodanie praktykanta, który nie \n będzie miał dostępu do generowania \n skierowań itd., a jedynie historii chorób" as notka
+
+}
+
+dpb --|> dwb : include
+hch --|> wgl : include
+hch <|-- dnw : extend
+
+actor "Recepcja" as r
+
+r --> dodpac
+r --> edpac
+r --> dodwiz
+r --> tpar
+r --> wpac
+
+actor "Lekarz" as l
+
+l --> dpb
+l --> wsk
+l --> wry
+l --> dgzy
+l --> hch
+
+actor "Pielęgniarka" as p
+
+p --> dios
+p --> hiszcz
+
+actor "Admin" as a
+
+a --> dnkwb
+a --> ukwb
+a --> zr
+a --> zu
+zr ..> notka
+zu ..> notka
+
+
+@enduml

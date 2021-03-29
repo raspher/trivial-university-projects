@@ -1,0 +1,19 @@
+
+body {
+    margin: 25px;
+    background-color: lightskyblue;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+  }
+  
+  h1 {
+    font-size: 35px;
+    font-weight: normal;
+    margin-top: 5px;
+  }
+  
+  ul { list-style: circle; }
+  
+  li { text-shadow: 5px; }
+
+  #someid { color: green; }

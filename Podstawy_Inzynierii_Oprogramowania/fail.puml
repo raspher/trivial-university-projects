@@ -1,0 +1,48 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+Pacjent .> (rejestracja)
+Pacjent .. (badania)
+
+(kolejka) <.. Lekarz : kolejna osoba
+Lekarz ..> (badania)
+Lekarz ..> (EKG)
+Lekarz ..> (USG)
+Lekarz ..> (Diagnoza)
+Lekarz .> (osłuchanie)
+
+Recepcja ..> (rejestracja)
+Recepcja ..> (płatność za wizytę)
+
+Pielegniarka_ ..> (podanie szczepionki)
+Pielegniarka .. (EKG)
+Pielegniarka .. (USG)
+Pielegniarka ..> (badanie cukru)
+
+(rejestracja) <|-- (kolejka) : lekarz
+(rejestracja) <|-- (podanie szczepionki) : szczepienie
+
+(kolejka) --> (badania)
+
+' Badanie i powiązane !TODO:
+(badania) <|-- (wywiad)
+(badania) <|-- (badania podstawowe)
+(badania podstawowe) <|-- (osłuchanie)
+(badania podstawowe) <|-- (badanie cukru)
+(badania podstawowe) <|-- (badanie ciśnienia)
+(badania podstawowe) <|-- (pomiar temperatury)
+(badania) <|-- (badania specjalistyczne)
+(badania specjalistyczne) <|-- (USG)
+(badania specjalistyczne) <|-- (EKG)
+
+
+(badania) ----> (Diagnoza)
+(Diagnoza) <|-- (porada)
+(Diagnoza) <|-- (skierowanie) : wymaga specjalisty
+(Diagnoza) <|-- (podjęcie leczenia) : nie wymaga specjalisty
+
+(podjęcie leczenia) <|-- (wypisanie recepty)
+(podjęcie leczenia) --|> (stosowanie leków)
+(Diagnoza) -> (płatność za wizytę)
+
+@enduml

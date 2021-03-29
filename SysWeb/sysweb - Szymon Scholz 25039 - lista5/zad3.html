@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css3.css">
+</head>
+<body>
+    <div class="lewy">
+        <div class="logowanie">
+            <p>Login</p>
+            <input type="text" onkeyup="rozmiar()" id="tekst">
+        </div>
+        <input type="button" id="fancy" value="Kliknij mnie" onclick="randomizeColor()">
+        <div class="smieszny">
+            <p>Ten śmieszny div </p>
+        </div>
+    </div>
+    <div onscroll="zmientekst()" class="prawy">
+        <h1 id="nagl" mouseleave>Ładowanie</h1>
+        <hr>
+        <article>
+            <h2>Artukuł 0</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi minus facilis repudiandae magni deleniti sed eveniet hic, asperiores, beatae at dignissimos aperiam earum totam molestiae error dolore magnam sequi harum?</p>
+            <hr>
+        </article>
+        <article>
+            <h2>Artukuł 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi minus facilis repudiandae magni deleniti sed eveniet hic, asperiores, beatae at dignissimos aperiam earum totam molestiae error dolore magnam sequi harum?</p>
+            <hr>
+        </article>
+        <article>
+            <h2>Artukuł 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi minus facilis repudiandae magni deleniti sed eveniet hic, asperiores, beatae at dignissimos aperiam earum totam molestiae error dolore magnam sequi harum?</p>
+            <hr>
+        </article>
+        <article>
+            <h2>Artukuł 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi minus facilis repudiandae magni deleniti sed eveniet hic, asperiores, beatae at dignissimos aperiam earum totam molestiae error dolore magnam sequi harum?</p>
+            <hr>
+        </article>
+        <article>
+            <h2>Artukuł 4</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi minus facilis repudiandae magni deleniti sed eveniet hic, asperiores, beatae at dignissimos aperiam earum totam molestiae error dolore magnam sequi harum?</p>
+            <hr>
+        </article>
+        <article>
+            <h2>Artukuł 5</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi minus facilis repudiandae magni deleniti sed eveniet hic, asperiores, beatae at dignissimos aperiam earum totam molestiae error dolore magnam sequi harum?</p>
+            <hr>
+        </article>
+        <article>
+            <h2>Artukuł 6</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi minus facilis repudiandae magni deleniti sed eveniet hic, asperiores, beatae at dignissimos aperiam earum totam molestiae error dolore magnam sequi harum?</p>
+            <hr>
+        </article>
+        <article>
+            <h2>Artukuł 7</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi minus facilis repudiandae magni deleniti sed eveniet hic, asperiores, beatae at dignissimos aperiam earum totam molestiae error dolore magnam sequi harum?</p>
+            <hr>
+        </article>
+        <article>
+            <h2>Artukuł 8</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi minus facilis repudiandae magni deleniti sed eveniet hic, asperiores, beatae at dignissimos aperiam earum totam molestiae error dolore magnam sequi harum?</p>
+            <hr>
+        </article>
+        <article>
+            <h2>Artukuł 9</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi minus facilis repudiandae magni deleniti sed eveniet hic, asperiores, beatae at dignissimos aperiam earum totam molestiae error dolore magnam sequi harum?</p>
+            <hr>
+        </article>
+    </div>
+</body>
+<script>
+    function randomizeColor(){
+        document.getElementById("fancy").style.background = randomColor();
+    }
+
+    function rozmiar(){
+        document.getElementById("tekst").style.width = document.getElementById("tekst").value + "px";
+    } 
+
+    function randomColor(){
+        return '#' + Math.floor(Math.random() * 16777215).toString(16);
+    }
+
+    function zmientekst(){
+        var teksty = document.getElementsByTagName("p");
+        for (const tekst of teksty) {
+            tekst.style.color = "red";
+        }
+    }
+
+    var artykuly = document.getElementsByTagName("article");
+    for (const artykul of artykuly) {
+        artykul.addEventListener('mouseleave', e => {
+            artykul.style.display = 'none';
+        });
+    }
+
+    window.onload = () => {
+        document.getElementById("nagl").innerHTML = "Strona załadowana";
+    }
+</script>
+</html>
