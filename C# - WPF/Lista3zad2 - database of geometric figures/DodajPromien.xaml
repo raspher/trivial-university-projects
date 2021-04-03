@@ -1,0 +1,19 @@
+﻿<Window x:Class="Lista3zad2.DodajPromien"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lista3zad2"
+        mc:Ignorable="d"
+        Title="DodajPromien" Height="150" Width="200">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Name="question" Content="Podaj promień koła" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox Name="answer" Grid.Row="1" Width="50" Height="25"/>
+        <Button Content="OK" Width="50" Height="25" Grid.Row="2" Click="Button_Click"/>
+    </Grid>
+</Window>
